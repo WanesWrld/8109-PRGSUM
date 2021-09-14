@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+
+<font src="~/Content/FONT/fontawesome-webfont.eot"></font>
+<font src="~/Content/FONT/fontawesome-webfont.svg"></font>
+
+<font src="~/Content/FONT/fontawesome-webfont.ttf"></font>
+
+<font src="~/Content/FONT/fontawesome-webfont.woff"></font>
+<font src="~/Content/FONT/fontawesome-webfont.woff2"></font>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css", "~/Content/css/animate.min.css", "~/Content/css/bootstrap.min.css", "~/Content/css/cubeportfolio.min.css", "~/Content/css/font-awesome.css", "~/Content/css/jquery.fancybox.min.css", "~/Content/css/magnific-popup.min.css", "~/Content/css/owl-carousel.min.css", "~/Content/css/reset.css", "~/Content/css/responsive.css", "~/Content/css/slicknav.min.css", "~/Content/css/style.css", "~/Content/SKIN/skin-1.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preeloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    <!--/ End Preloader -->
+    <!-- Header -->
+    <header class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <!-- Top Contact -->
+                        <div class="top-contact">
+                            <div class="single-contact"><i class="fa fa-phone"></i>Phone: +(600) 125-4985-214</div>
+                            <div class="single-contact"><i class="fa fa-envelope-open"></i>Email: info@ctcareer.co.za</div>
+                            <div class="single-contact"><i class="fa fa-clock-o"></i>Opening: 08AM - 09PM</div>
+                        </div>
+                        <!-- End Top Contact -->
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="topbar-right">
+                            <!-- Social Icons -->
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+
+
+                            <!---User name and logout Button -->
+                            <ul class="nav navbar-nav" style="float:right !important ">
+                                @if (Session["EmailTT"] != null)
+                                {
+                        <div class="row-d1">
+
+                            <li>
+                                <p class="row-p2" style="color:#ffffff" ; margin-top: 15px;> Hello @Session["EmailTT"] </p>
+                            </li>
+
+                            <div class="button">
+                                <form action="/Account/Logout" method="get">
+                                    <button class="bizwheel-btn">Logout</button>
+                                </form>
+                            </div>
+
+                        </div>}
+                            </ul>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Topbar -->
+        <!-- Middle Header -->
+        <div class="middle-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="middle-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <!-- Logo -->
+                                    <div class="logo">
+                                        <!-- Image Logo -->
+                                        <div class="img-logo">
+                                            <form action="/" method="post">
+                                                <img src="~/Content/img/logo2.png" alt="#">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-nav"></div>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-12">
+                                    <div class="menu-area">
+                                        <!-- Main Menu -->
+                                        <nav class="navbar navbar-expand-lg">
+                                            <div class="navbar-collapse">
+                                                <div class="nav-inner">
+                                                    <div class="menu-home-menu-container">
+                                                        <!-- Naviagiton -->
+                                                        <ul id="nav" class="nav main-menu menu navbar-nav">
+
+                                                            <li>
+                                                                <form action="/" method="post"><a href="/">Home1</a></form>
+                                                            </li>
+                                                            <li>
+                                                                <form action="/Home1/Services" method="post"><a href="/Home1/Services">Services</a></form>
+                                                            </li>
+                                                            <li>
+                                                                <form action="/Home1/Portfolio" method="post"><a href="/Home1/Portfolio">Portfolio</a></form>
+                                                            </li>
+                                                            <li>
+                                                                <form action="/Home1/About" method="post"><a href="/Home1/About">About</a></form>
+                                                            </li>
+                                                            <li>
+                                                                <form action="/Home1/Contact" method="post"><a href="/Home1/Contact">Contact</a></form>
+                                                            </li>
+
+                                                        </ul>
+                                                        <!--/ End Naviagiton -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!--/ End Main Menu -->
+                                        <!-- Right Bar -->
+                                        <div class="right-bar">
+                                            <!-- Search Bar -->
+                                            <ul class="right-nav">
+                                                <li class="top-search"><a href="#0"><i class="fa fa-search"></i></a></li>
+                                                <li class="bar"><a class="fa fa-bars"></a></li>
+                                            </ul>
+                                            <!--/ End Search Bar -->
+                                            <!-- Search Form -->
+                                            <div class="search-top">
+                                                <form action="#" class="search-form" method="get">
+                                                    <input type="text" name="s" value="" placeholder="Search here" />
+                                                    <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                            <!--/ End Search Form -->
+                                        </div>
+                                        <!--/ End Right Bar -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Middle Header -->
+        <!-- Sidebar Popup -->
+        <div class="sidebar-popup">
+            <div class="cross">
+                <a class="btn"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="single-content">
+                <h4>About Bizwheel</h4>
+
+                <!-- Social Icons -->
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <div class="single-content">
+                <h4>Important Links</h4>
+                <ul class="links">
+                    <li>
+                        <form action="/" method="post">
+                            <a>Home</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="/Home1/Services" method="post">
+                            <a>Services</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="/Home1/Portfolio" method="post">
+                            <a>Portifolio</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="/Home1/About" method="post">
+                            <a>About Us</a>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="/Home1/Contact" method="post">
+                            <a>Contact</a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/ Sidebar Popup -->
+    </header>
+    <!--/ End Header -->
+
+
+    @RenderBody();
+
+    <!-- Footer -->
+    <footer class="footer" style="background-image:url('~/img/map.png')">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Footer About -->
+                        <div class="single-widget footer-about widget">
+                            <div class="logo">
+                                <div class="img-logo">
+                                    <a class="logo" href="index.html">
+                                        <img class="img-responsive" src="~/Content/img/logo2.png" alt="logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-widget-about-description">
+                                <p>Beatae vitae dicta su explicabo nemo enim ipsam voluptatem quia voluptas sitBeatae vitae sitBeatae vitae dicta suntania..</p>
+                            </div>
+                            <div class="social">
+                                <!-- Social Icons -->
+                                <ul class="social-icons">
+                                    <li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a class="pinterest" href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="button">
+                                <form action="/Home1/About" method="post">
+                                    <button class="bizwheel-btn">About Us</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!--/ End Footer About -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Footer Links -->
+                        <div class="single-widget f-link widget">
+                            <h3 class="widget-title">Company</h3>
+                            <ul>
+
+                                <li>
+                                    <form action="/" method="post">
+                                        <a>Home1</a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="/Home1/Services" method="post">
+                                        <a>Services</a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="/Home1/Portfolio" method="post">
+                                        <a>Portifolio</a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="/Home1/About" method="post">
+                                        <a>About Us</a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="/Home1/Contact" method="post">
+                                        <a>Contact</a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/ End Footer Links -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- Footer News -->
+                        <div class="single-widget footer-news widget">
+                            <h3 class="widget-title">Blog Page</h3>
+                            <!-- Single News -->
+                            <div class="single-f-news">
+                                <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                <div class="content">
+                                    <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>August 27, 2021</time></p>
+                                    <h4 class="title"><a href="">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                </div>
+                            </div>
+                            <!--/ End Single News -->
+                            <!-- Single News -->
+                            <div class="single-f-news">
+                                <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                <div class="content">
+                                    <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>April 10, 2020</time></p>
+                                    <h4 class="title"><a href="">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                </div>
+                            </div>
+                            <!--/ End Single News -->
+                        </div>
+                        <!--/ End Footer News -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Footer Contact -->
+                        <div class="single-widget footer_contact widget">
+                            <h3 class="widget-title">Contact</h3>
+                            <p>Beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem</p>
+                            <ul class="address-widget-list">
+                                <li class="footer-mobile-number"><i class="fa fa-phone"></i>+(600) 125-4985-214</li>
+                                <li class="footer-mobile-number"><i class="fa fa-envelope"></i>info@ctucareer.co.za</li>
+                                <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>1st Floor, Pretty Suites Office Block</li>
+                            </ul>
+                        </div>
+                        <!--/ End Footer Contact -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                        <!-- Footer Newsletter -->
+                        <div class="footer-newsletter">
+                            <form action="#" method="post" class="newsletter-area">
+                                <input type="email" placeholder="Your email address">
+                                <button type="submit">Sign Up</button>
+                            </form>
+                        </div>
+                        <!--/ End Footer Newsletter -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-content">
+                            <!-- Copyright Text -->
+                            <p>&copy; Copyright PRGSummative - Paulo NGOVE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Copyright -->
+    </footer>
+
+
+
+    <!-- Jquery JS -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.0.js"></script>
+    <!-- Popper JS -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Modernizr JS -->
+    <script src="/js/modernizr.min.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="/js/scrollup.js"></script>
+    <!-- FacnyBox JS -->
+    <script src="/js/jquery-fancybox.min.js"></script>
+    <!-- Cube Portfolio JS -->
+    <script src="/js/cubeportfolio.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="/js/slicknav.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="/js/slicknav.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="/js/owl-carousel.min.js"></script>
+    <!-- Easing JS -->
+    <script src="js/easing.js"></script>
+    <!-- Magnipic Popup JS -->
+    <script src="/js/magnific-popup.min.js"></script>
+    <!-- Active JS -->
+    <script src="/js/active.js"></script>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
